@@ -19,6 +19,22 @@ namespace FlappyBird
         public MainWindow()
         {
             InitializeComponent();
+            CreateBackground();
+        }
+
+        private void CreateBackground()
+        {
+
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

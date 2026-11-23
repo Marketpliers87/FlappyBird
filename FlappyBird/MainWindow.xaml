@@ -27,7 +27,7 @@
 
         <Canvas x:Name="map" Background="SkyBlue" Grid.Row="1">
             <Image x:Name="birdImage" Width="45" Height="40" Canvas.Left="150" Canvas.Top="150"/>
-            <TextBlock x:Name="txtGameOver" Text="GAME OVER" FontSize="45" FontWeight="Bold" Foreground="Red" Visibility="Collapsed" Canvas.Left="280" Canvas.Top="180"/>
+            <TextBlock x:Name="txtGameOver" Text="Game over" FontSize="45" FontWeight="Bold" Foreground="Red" Visibility="Collapsed" Canvas.Left="280" Canvas.Top="180"/>
         </Canvas>
     </Grid>
 </Window>
