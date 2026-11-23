@@ -5,17 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlappyBird"
         mc:Ignorable="d"
-        Title="FlappyBird" Height="450" Width="800">
+        Title="FlappyBird" Height="600" Width="900"
+        KeyDown="Window_KeyDown">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="65"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Button x:Name="start" Content="Start" Width="90" Height="45" Grid.Row="0" Click="start_Click" />
-        <Canvas x:Name="palya" Background="AliceBlue" Grid.Row="3">
-            <Button x:Name="auto2" Content="Birb" Width="50" Height="40" Background="Green"
-                    Canvas.Left="20" Canvas.Top="140"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="start" Content="Start" Width="90" Height="40" Click="start_Click" Grid.Column="0" FontSize="18"/>
+            <TextBlock x:Name="score" Text="Score: 0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" FontWeight="Bold"/>
+            <CheckBox x:Name="Mbackground" Content="Moving background" IsChecked="True" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" FontSize="15"/>
+        </Grid>
+
+        <Canvas x:Name="map" Background="SkyBlue" Grid.Row="1">
+            <Image x:Name="birdImage" Width="45" Height="40" Canvas.Left="150" Canvas.Top="150"/>
+            <TextBlock x:Name="txtGameOver" Text="GAME OVER" FontSize="45" FontWeight="Bold" Foreground="Red" Visibility="Collapsed" Canvas.Left="280" Canvas.Top="180"/>
         </Canvas>
     </Grid>
 </Window>
